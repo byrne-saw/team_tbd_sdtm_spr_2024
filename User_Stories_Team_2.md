@@ -2,6 +2,8 @@
 ### Team TBD
 #### Thursday 2/1 2:30PM (Subsequent meetings TBD week-to-week)
 
+### Video Link: https://drive.google.com/file/d/1Ln8yjWGDkneuPyP6Z-2kr21yoiAbo6-0/view?usp=drive_link
+
 ### Stories included:  [1, 2, 3, 4, 5, 10, 15, 16]
 
 ### User Story : 1
