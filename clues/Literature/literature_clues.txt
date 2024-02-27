@@ -1,0 +1,10 @@
+<td id="clue_DJ_4_1" class="clue_text">Richard III should have seen Monty Hall for this trade deal</td>
+    <td id="clue_DJ_4_2" class="clue_text">While Juliet took a stab at killing herself, Romeo did this to end it all</td>
+    <td id="clue_DJ_4_3" class="clue_text">Falstaff calls it "the better part of valour"</td>
+    <td id="clue_DJ_4_4" class="clue_text">Caesar calls him dangerous because he has "a lean and hungry look"</td>
+    <td id="clue_DJ_4_5" class="clue_text">Shakespeare's shortest play, it's a humorous look at the mishaps of double trouble</td>
+<td id="clue_DJ_1_1" class="clue_text">'Twas 2 days before Christmas in 1823 that the poem "A Visit from" him was published anonymously in a New York newspaper</td>
+    <td id="clue_DJ_1_2" class="clue_text">This Stevenson classic is divided into 6 parts including "The Old Buccaneer" &amp; "Captain Silver"</td>
+    <td id="clue_DJ_1_3" class="clue_text">In 1863 he published a novel about "The Cossacks", who also get plenty of mention in his next, more epic, work</td>
+    <td id="clue_DJ_1_4" class="clue_text">His adventure novel "Une Ville Flottante", "A Floating City", takes place on a steamship, not under the sea</td>
+    <td id="clue_DJ_1_5" class="clue_text">His first book of poems, "The Black Riders" was published in 1895, the same year as his "Red Badge of Courage"</td>

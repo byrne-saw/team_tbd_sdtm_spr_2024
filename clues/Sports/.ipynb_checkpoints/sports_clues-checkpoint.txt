@@ -1,0 +1,10 @@
+ <td id="clue_DJ_3_1" class="clue_text">Sport where one might show off his giant slalom</td>
+    <td id="clue_DJ_3_2" class="clue_text">Minimum number of balls which must be thrown in the 10th frame in bowling</td>
+    <td id="clue_DJ_3_3" class="clue_text">Ballpark the 1984 World Series pennant is flying over</td>
+    <td id="clue_DJ_3_4" class="clue_text">This ABC series hosted by Curt Gowdy was recently canceled, ending its 20 year run</td>
+    <td id="clue_DJ_3_5" class="clue_text">The oldest of organized college sports, since 1841 Oxford &amp; Cambridge have contested yearly</td>
+<td id="clue_J_5_1" class="clue_text">1998:<br />Peyton Manning</td>
+    <td id="clue_J_5_2" class="clue_text">1970:<br />Terry Bradshaw</td>
+    <td id="clue_J_5_3" class="clue_text">2001:<br />Michael Vick</td>
+    <td id="clue_J_5_4" class="clue_text">2009:<br />Matthew Stafford</td>
+    <td id="clue_J_5_5" class="clue_text">1974:<br />Ed "Too Tall" Jones</td>

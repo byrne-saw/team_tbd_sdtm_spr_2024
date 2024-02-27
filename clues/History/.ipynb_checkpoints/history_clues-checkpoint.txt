@@ -1,0 +1,10 @@
+ <td id="clue_DJ_6_1" class="clue_text">Ohio senator whose "take off" for the presidency was aborted in early mission</td>
+    <td id="clue_DJ_6_2" class="clue_text">American Vietnam vets settled out of court in their suit about exposure to this herbicide</td>
+    <td id="clue_DJ_6_3" class="clue_text">Soviet dissident who went on a hunger strike in May to get his wife medical treatment abroad</td>
+    <td id="clue_DJ_6_4" class="clue_text">CIA dir. linked in '84 to the stolen Carter briefing papers &amp; the mining of Nicaragua's harbor</td>
+    <td id="clue_DJ_6_5" class="clue_text">February 11, 1984 marked the 1st time a U.S. spacecraft had ever landed here</td>
+ <td id="clue_DJ_6_1" class="clue_text">The name of this dynasty that ruled in Europe from the 1200s to the 1900s came from the family's ancestral "Hawk's Castle"</td>
+    <td id="clue_DJ_6_2" class="clue_text">King of Judea, he built the palace-fortress of Masada &amp; rebuilt the temple of Jerusalem</td>
+    <td id="clue_DJ_6_3" class="clue_text">The Battle of Castillon &amp; the capture of Bordeaux in 1453 effectively ended this war</td>
+    <td id="clue_DJ_6_4" class="clue_text">Following WWII this Japanese emperor declared he was not a living god &amp; renounced his divinity</td>
+    <td id="clue_DJ_6_5" class="clue_text">This emperor of Ethiopia was deposed in 1974 &amp; died under mysterious circumstances a year later</td>

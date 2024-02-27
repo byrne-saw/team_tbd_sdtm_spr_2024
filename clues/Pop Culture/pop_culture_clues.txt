@@ -1,0 +1,10 @@
+ <td id="clue_J_5_1" class="clue_text">The word repeated 3 times following "She Loves You"</td>
+    <td id="clue_J_5_2" class="clue_text">English version of the German hit "Komm, Gib Mir Deine Hand"</td>
+    <td id="clue_J_5_3" class="clue_text">An album cover photograph taken at 10 A.M. Aug, 8, 1969 made this street's crosswalk world famous</td>
+    <td id="clue_J_5_4" class="clue_text">Born in a small brick row house July 7, 1940 in Liverpool, he's the oldest  Beatle</td>
+    <td id="clue_J_5_5" class="clue_text">Type of apple in the Apple Records logo</td>
+ <td id="clue_DJ_3_1" class="clue_text">This lady duetted with Ariana Grande on the 2020 hit "Rain On Me"</td>
+    <td id="clue_DJ_3_2" class="clue_text">At the end of the movie "Grease", they duet on "You're The One That I Want"</td>
+    <td id="clue_DJ_3_3" class="clue_text">Colbie Caillat &amp; Jason Mraz sang "I'm" this "I'm in love"</td>
+    <td id="clue_DJ_3_4" class="clue_text">"Somebody That I Used To Know" is by Kimbra &amp; this one-named guy</td>
+    <td id="clue_DJ_3_5" class="clue_text">She &amp; Charlie Puth sang about how "We Don't Talk Anymore"</td>

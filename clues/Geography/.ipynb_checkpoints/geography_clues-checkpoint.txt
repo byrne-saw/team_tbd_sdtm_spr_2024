@@ -1,0 +1,10 @@
+  <td id="clue_DJ_1_1" class="clue_text">City Anna would have to go to today to visit the king of "Siam" at home</td>
+    <td id="clue_DJ_1_2" class="clue_text">English town named for a tree belonging to a man named "Cofa", it got a treat with Godiva's ride</td>
+    <td id="clue_DJ_1_3" class="clue_text">Brazilian city name which is Portuguese equivalent to Minnesota's capital</td>
+    <td id="clue_DJ_1_4" class="clue_text">The administrative capital of South Africa, people marched to it in song</td>
+    <td id="clue_DJ_1_5" class="clue_text">Russian port on the Black Sea, scene of an eleven-month siege in the Crimean War</td>
+ <td id="clue_J_3_1" class="clue_text">The Goldrush variety of this is the state fruit; hopefully, one a day will keep the doctor away</td>
+    <td id="clue_J_3_2" class="clue_text">Grab your partner &amp; head to the hoedown for a little of this type of folk dance, official since 1990</td>
+    <td id="clue_J_3_3" class="clue_text">This red bird beat out the bluebird as an official state symbol</td>
+    <td id="clue_J_3_4" class="clue_text">This orange &amp; black butterfly reigns as the state insect</td>
+    <td id="clue_J_3_5" class="clue_text">The state tree is the Quercus alba, or white this</td>
