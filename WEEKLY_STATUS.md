@@ -6,5 +6,30 @@ Five different categories have been created: Geography, History, Pop Culture, Li
 
 Very rough first pass at a user interface has been created and shared to the repository for review. Team members will review and provide initial feedback for continued refinement prior to developing our front end pages design and explanations for next week. Development/refinement of this outline will be used for streamlined development of database, frontend development and Flask routing.
 
+A Flask project directory was created with a basic Python script to define our Flask application and initial 
+routes. A framework was set up to render HTML templates dynamically from a list of game categories. The next steps will involve meeting with the team in order to define additional routes and functions for our application, and to ensure alignment between the frontend and backend components of our website.
+
+Flask Files in Shared Directory: 
+```
+flask_proj/
+├── images
+│   └── ...
+├── static
+│   ├── css
+│   │   └── prefix.css
+│   └── images
+│       └── test.jpg
+├── templates
+│   └── categories.html
+├── venv
+│   └── ...
+├── jeop_app.py
+├── prefix.py
+├── setup.cmds
+```
+
+
+
+
 
 
