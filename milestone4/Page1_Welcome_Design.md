@@ -14,9 +14,9 @@ Data Needed:
 
 Link Destinations: 
 
-1. <u><font color="blue">How-To</font></u> for game instructions, available configurations, and player objectives.
+1. <u><font color="blue">How-To</font></u>: for game instructions, available configurations, and player objectives.
 	
-2. <u><font color="blue">Let's Play!</font></u> link for starting a game
+2. <u><font color="blue">Let's Play!</font></u>: link for starting a game
 
 Tests for verifying the rendering of the page:
 
