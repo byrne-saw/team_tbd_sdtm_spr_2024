@@ -13,12 +13,12 @@ Parameters:
     - Populate user input box with active player's name and prompt
 2) Clue Name/ID
 3) Clue Value
+4) User response
+    - Gather from user input
 
 Data Needed:
 1) Correct Question (answer)
 2) Clue text/description
-3) User response
-    - Gather from user input
 
 Link Destinations: 
 
