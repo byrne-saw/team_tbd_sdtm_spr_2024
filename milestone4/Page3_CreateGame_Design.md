@@ -18,7 +18,7 @@ Parameters:
 Data Needed: 
 
 1) Categories, either custom selected from list OR randomly selected from database
-    - Will need selected categories; their respective clues AND the clues corresponding point values
+    - Will need selected categories; their respective clues AND clues will be gathered upon starting game
     - If **CUSTOM**, fetch list of all categories and render as the dropdown list, series of radio buttons, etc.
 
 Link Destinations: 
