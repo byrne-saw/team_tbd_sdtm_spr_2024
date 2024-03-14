@@ -10,16 +10,13 @@ Prototype:
 
 Parameters: None
 
-Data Needed: 
+Data Needed: None
 
 Link Destinations: 
 
-1. <u><font color="blue">Home</font></u>: Return to Homepage
-	
-2. <u><font color="blue">Let's Play!</font></u>: link for starting a game
+1) <u><font color="blue">Home</font></u>: Return to Homepage	
+2) <u><font color="blue">Let's Play!</font></u>: link for starting a game
 
 Tests for verifying the rendering of the page:
 
-
-
-
+1) Visiting **/How-To** (or similar) URL of website returns HTML for rendering how-to page
