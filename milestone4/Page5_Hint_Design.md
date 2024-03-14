@@ -13,11 +13,11 @@ Parameters:
     - Populate user input box with active player's name and prompt
 2) Clue Name/ID
 3) Clue Value
-4) Correct Question (answer)
 
 Data Needed:
-1) Clue text/description
-2) User response
+1) Correct Question (answer)
+2) Clue text/description
+3) User response
     - Gather from user input
 
 Link Destinations: 
@@ -30,6 +30,8 @@ Tests for verifying the rendering of the page:
 2) Verify that incorrect user input triggers incorrect response (navigate/trigger answer)
 3) Verify that correct user input triggers correct response (navigate/trigger answer)
 4) Verify that empty user input triggers error message prompting valid input
+5) Verify that **/Game{id}/Hint** URL renders page correctly
+    - If visited prior to game creation, error message and redirect occurs
 
 
 
