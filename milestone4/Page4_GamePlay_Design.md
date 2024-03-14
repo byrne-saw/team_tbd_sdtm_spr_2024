@@ -34,5 +34,7 @@ Tests for verifying the rendering of the page:
 9) Verify that when all clues have been revealed, either:
     - Game completes and navigates to GameOver page
     - Game enters double and final jeopardy rounds respectively
+10) Verify that **/Game{id}** URL renders page correctly
+    - If visited prior to game creation, error message and redirect occurs
 
 
