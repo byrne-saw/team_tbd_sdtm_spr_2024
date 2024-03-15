@@ -5,7 +5,7 @@ Page 1 Title: Welcome to JeoparDIY!
 
 Prototype: 
 
-<img src="./Images/page1.png" alt="Page 1" width="300" height="200">
+<img src="Images/page1.png" alt="Page 1" width="300" height="200">
 
 Parameters: None
 
@@ -29,7 +29,7 @@ Page 2 Title: How-To
 
 Prototype: 
 
-<img src="./Images/page2.png" alt="Page 2" width="300" height="200">
+<img src="Images/page2.png" alt="Page 2" width="300" height="200">
 
 Parameters: None
 
@@ -51,7 +51,7 @@ Page 3 Title: Create Your Game
 
 Prototype: 
 
-<img src="./Images/page3.png" alt="Page 3" width="300" height="200">
+<img src="Images/page3.png" alt="Page 3" width="300" height="200">
 
 Parameters:  
 
@@ -68,6 +68,7 @@ Data Needed:
 
 Link Destinations: 
 1) <u><font color="blue">Home</font></u>: Return to Homepage (not shown in prototype)
+2) <u><font color="blue">Let's Play!</font></u>: link for starting a games
 
 Tests for verifying the rendering of the page:
 1) Verify that 1, 2, 3 and 4 player games initiate correctly
@@ -78,39 +79,46 @@ Tests for verifying the rendering of the page:
 5) Visiting **/CreateGame** (or similar) URL of website returns HTML for rendering create game page
 ***
 
-## Page 4: Game
+## Page 4 : Game Play
 
-Page 5 Title: Hint
+Page 4 Title: Game Play
 
 Prototype: 
 
-<img src="./Images/page5.png" alt="Page 5" width="300" height="200">
+<img src="Images/page4.png" alt="Page 4" width="300" height="200">
 
-Parameters: 
-1) Active player
-    - Populate user input box with active player's name and prompt
-2) Clue Name/ID
-3) Clue Value
-4) User response
-    - Gather from user input
+Parameters:
+1) Number and names of players from **/CreateGame**
+2) Category selections from **/CreateGame**
+    - Categories (name and order)
 
-Data Needed:
-1) Correct Question (answer)
-2) Clue text/description
+Data Needed: 
+1) Categories data, either custom selected from list OR randomly selected from database
+    - Will need selected categories; their respective clues AND the clues corresponding point values
 
 Link Destinations: 
 
-1. <u><font color="blue">Home</font></u>: Return to Homepage
-2. <u><font color="blue">Submit</font></u>: Navigate to Answer page
+1) <u><font color="blue">Reset</font></u>: return to page 3 (Create Your Game) to reset game
+2) <u><font color="blue">Home</font></u>: Return to Homepage
+2) <u><font color="blue">Clue</font></u>: Open corresponding clue
 
 Tests for verifying the rendering of the page:
-1) Verify that answer text/card and its value rendered matches the button clicked previously
-2) Verify that incorrect user input triggers incorrect response (navigate/trigger answer)
-3) Verify that correct user input triggers correct response (navigate/trigger answer)
-4) Verify that empty user input triggers error message prompting valid input
-5) Verify that **/Game{id}/Hint** URL renders page correctly
+1) Verify that 1, 2, 3 and 4 player games initiate correctly
+    - Names of players and categories are passed successfully and order is maintained
+3) Verify that 1, 2, 3 and 4 player games maintain order correctly
+4) Verify that 1, 2, 3 and 4 player games maintain score correctly
+5) Verify that clicking on a clue box navigates to a window corresponding to that clue
+6) Verify that correct answer increments corresponding player's score with the correct value
+7) Verify that incorrect answer decrements corresponding player's score with the correct value
+8) Verify that "spent" clues are colored uniquely and do not allow onClick() behavior
+9) Verify that when all clues have been revealed, either:
+    - Game completes and navigates to GameOver page
+    - Game enters double and final jeopardy rounds respectively
+10) Verify that **/Game{id}** URL renders page correctly
     - If visited prior to game creation, error message and redirect occurs
-***
+
+
+
 
 ## Page 5: Hint
 
@@ -118,7 +126,7 @@ Page 5 Title: Hint
 
 Prototype: 
 
-<img src="./Images/page5.png" alt="Page 5" width="300" height="200">
+<img src="Images/page5.png" alt="Page 5" width="300" height="200">
 
 Parameters: 
 1) Active player
@@ -152,7 +160,7 @@ Page 6 Title: Answer
 
 Prototype: 
 
-<img src="./Images/page6.png" alt="Page 6" width="300" height="200">
+<img src="Images/page6.png" alt="Page 6" width="300" height="200">
 
 Parameters:
 1) Active player (depending on UI/UX this likely is not needed)
@@ -184,12 +192,12 @@ Page 7 Title: Game Over!
 
 Prototype: 
 
-<img src="./Images/page7.png" alt="Page 7" width="300" height="200">
+<img src="Images/page7.png" alt="Page 7" width="300" height="200">
 
 Parameters: 
 1) Number and names of players from gameplay
 2) Current point values of each player
-3) *Push same or new decision to /CreateGame for correct rendering*
+3) Send same players as parameter to create new game or new decision to /CreateGame for correct rendering
 
 Data Needed: No new data is needed from DB
 
@@ -197,7 +205,8 @@ Link Destinations:
 
 1) <u><font color="blue">Same Players</font></u>: Return to page 3 (Create Your Game) with same player names filled in.
 2) <u><font color="blue">New Players</font></u>: Return to page 3 (Create Your Game) and fill in player names.
-3) <u><font color="blue">Home</font></u>: Return to Homepage (quit)
+3) <u><font color="blue">Home</font></u>: Return to Homepage (quit) <br>
+* Will likely group "Same Players" and "New Players" into one button, "Play Again"
 
 Tests for verifying the rendering of the page:
 1) Verify that player currently in lead is declared winner

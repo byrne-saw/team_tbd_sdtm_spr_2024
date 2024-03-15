@@ -31,7 +31,7 @@ flask_proj/
 
 ## Week 4 Status:
 
-Now that we have an initial, rough sketch of the web pages, the routes in Flask are being extended to handle redirection and the flow of the website. All of the web pages currently have at least one button to allow a user to change pages. The POST method is being used to handle button clicks and to perform redirection. The backend will be developed further, especially when the web page design phase is complete. 
+Now that we have an initial sketch of the web pages, the routes in Flask are being extended to handle redirection and the flow of the website. All of the web pages currently have at least one button to allow a user to change pages. The POST method is being used to handle button clicks and to perform redirection. The backend will be developed further, especially when the web page design phase is complete. 
 
 We are continuing to refine our web page prototypes this week. By the end of next week, we will finalize the parameters, links, data, and testing requirements for each page (this is not an actual implementation, but a detailed plan for each web page). We have a strong initial design of the user interface, gameplay/board layout, and web page flow.  
 
