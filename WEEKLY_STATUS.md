@@ -35,5 +35,8 @@ Now that we have an initial sketch of the web pages, the routes in Flask are bei
 
 We are continuing to refine our web page prototypes this week. By the end of next week, we will finalize the parameters, links, data, and testing requirements for each page (this is not an actual implementation, but a detailed plan for each web page). We have a strong initial design of the user interface, gameplay/board layout, and web page flow.  
 
+## Week 5 Status:
+
+Milestone 4 has been completed and turned in. A team meeting was held to go over the PAGE_TESTING.md file and disucss any necessary changes. After the meeting, the appropriate changes were made and the milestone was submitted to Moodle. In the meeting, we also discussed the next steps for each team member and made plans for our next weekly meeting. 
 
 
