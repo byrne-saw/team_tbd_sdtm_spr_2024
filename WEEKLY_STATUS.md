@@ -39,4 +39,8 @@ We are continuing to refine our web page prototypes this week. By the end of nex
 
 Milestone 4 has been completed and turned in. A team meeting was held to go over the PAGE_TESTING.md file and disucss any necessary changes. After the meeting, the appropriate changes were made and the milestone was submitted to Moodle. In the meeting, we also discussed the next steps for each team member and made plans for our next weekly meeting. 
 
+## Week 6 Status:
+
+The database of clues has been expanded to include 6 categories with 10 clues each. This way, we have the data for one complete game of Jeopardy to work with as we work on the SQL milestone. The category added was Science, with clues taken from game ids 8831 and 8833. Also, a script to extract the answers from the game html files was written and added to the bin directory. This script was then used to extract the correct responses for the clues that are included in our database. The answers are all located in the newly created answers directory. This has the same layout as the clues directory, with each category having its own folder and text file, and all of the answers are in the same order that the clues are in in their respective text files. Further, the html files for all of the games used have been added to the repository in the game_files directory. 
+
 
