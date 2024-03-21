@@ -1,0 +1,10 @@
+<td id="clue_DJ_4_1_r" class="clue_text" style="display:none;"><em class="correct_response">a kingdom for a horse</em><br /><br /><table width="100%"><tr><td class="right">Carole</td></tr></table></td>
+    <td id="clue_DJ_4_2_r" class="clue_text" style="display:none;"><em class="correct_response">taking poison</em><br /><br /><table width="100%"><tr><td class="right">Carole</td></tr></table></td>
+    <td id="clue_DJ_4_3_r" class="clue_text" style="display:none;"><em class="correct_response">discretion</em><br /><br /><table width="100%"><tr><td class="right">Jack</td></tr></table></td>
+    <td id="clue_DJ_4_4_r" class="clue_text" style="display:none;">(Jack: Who is Mark Antony?)<br /><br /><em class="correct_response">Cassius</em><br /><br /><table width="100%"><tr><td class="right">Carole</td><td class="wrong">Jack</td></tr></table></td>
+    <td id="clue_DJ_4_5_r" class="clue_text" style="display:none;"><em class="correct_response"><i>The Comedy of Errors</i></em><br /><br /><table width="100%"><tr><td class="wrong">Triple Stumper</td></tr></table></td>
+ <td id="clue_DJ_1_1_r" class="clue_text" style="display:none;"><em class="correct_response">St. Nicholas</em><br /><br /><table width="100%"><tr><td class="right">Fred</td></tr></table></td>
+    <td id="clue_DJ_1_2_r" class="clue_text" style="display:none;"><em class="correct_response"><i>Treasure Island</i></em><br /><br /><table width="100%"><tr><td class="right">Katherine</td></tr></table></td>
+    <td id="clue_DJ_1_3_r" class="clue_text" style="display:none;">(Fred: Who is Dostoevsky?)<br /><br /><em class="correct_response">(Leo) Tolstoy</em><br /><br /><table width="100%"><tr><td class="wrong">Fred</td><td class="right">Josh</td></tr></table></td>
+    <td id="clue_DJ_1_4_r" class="clue_text" style="display:none;"><em class="correct_response">Jules Verne</em><br /><br /><table width="100%"><tr><td class="right">Katherine</td></tr></table></td>
+    <td id="clue_DJ_1_5_r" class="clue_text" style="display:none;"><em class="correct_response">(Stephen) Crane</em><br /><br /><table width="100%"><tr><td class="right">Katherine</td></tr></table></td>

@@ -1,0 +1,10 @@
+<td id="clue_DJ_3_1_r" class="clue_text" style="display:none;"><em class="correct_response">skiing</em><br /><br /><table width="100%"><tr><td class="right">Jack</td></tr></table></td>
+    <td id="clue_DJ_3_2_r" class="clue_text" style="display:none;"><em class="correct_response">2</em><br /><br /><table width="100%"><tr><td class="right">Guy</td></tr></table></td>
+    <td id="clue_DJ_3_3_r" class="clue_text" style="display:none;">(Jack: What is Wrigley Field?)<br />...<br />(Alex: Yes, you're going to make the Chicago fans very happy, Jack, even with that piece of erroneous information.)<br /><br /><em class="correct_response">Tiger Stadium</em><br /><br /><table width="100%"><tr><td class="right">Guy</td><td class="wrong">Jack</td></tr></table></td>
+    <td id="clue_DJ_3_4_r" class="clue_text" style="display:none;"><em class="correct_response"><i>American Sportsman</i></em><br /><br /><table width="100%"><tr><td class="right">Guy</td></tr></table></td>
+    <td id="clue_DJ_3_5_r" class="clue_text" style="display:none;"><em class="correct_response">rowing</em><br /><br /><table width="100%"><tr><td class="right">Guy</td></tr></table></td>
+<td id="clue_J_5_1_r" class="clue_text" style="display:none;"><em class="correct_response">the Indianapolis Colts</em><br /><br /><table width="100%"><tr><td class="right">Prabhu</td></tr></table></td>
+    <td id="clue_J_5_2_r" class="clue_text" style="display:none;"><em class="correct_response">the Steelers</em><br /><br /><table width="100%"><tr><td class="right">Stephanie</td></tr></table></td>
+    <td id="clue_J_5_3_r" class="clue_text" style="display:none;"><em class="correct_response">the Falcons</em><br /><br /><table width="100%"><tr><td class="right">Prabhu</td></tr></table></td>
+    <td id="clue_J_5_4_r" class="clue_text" style="display:none;"><em class="correct_response">the Lions</em><br /><br /><table width="100%"><tr><td class="right">Stephanie</td></tr></table></td>
+    <td id="clue_J_5_5_r" class="clue_text" style="display:none;"><em class="correct_response">the Dallas Cowboys</em><br /><br /><table width="100%"><tr><td class="wrong">Triple Stumper</td></tr></table></td>
