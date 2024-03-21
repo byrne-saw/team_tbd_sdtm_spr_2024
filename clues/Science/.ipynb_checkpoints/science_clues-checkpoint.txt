@@ -1,0 +1,10 @@
+<td id="clue_DJ_6_1" class="clue_text">Here, a man holds <a href="https://www.j-archive.com/media/2024-02-28_DJ_09.jpg" target="_blank">this</a> item fallen from the skies; call an expert in aerolithology, an old word for the study of them</td>
+    <td id="clue_DJ_6_2" class="clue_text">Love ticks &amp; these other little parasites with a minuscule name? Then acarology is for you!</td>
+    <td id="clue_DJ_6_3" class="clue_text">Casting &amp; tuning are parts of campanology, the art &amp; science of these</td>
+    <td id="clue_DJ_6_4" class="clue_text">Silvics is the study of these, &amp; silviculture, the art of their propagation</td>
+    <td id="clue_DJ_6_5" class="clue_text">Actinobiology studies the effect of this, whether in particle or electromagnetic form, on living things</td>
+ <td id="clue_DJ_3_1" class="clue_text">Magnalium is a strong, lightweight alloy of these 2 elements</td>
+    <td id="clue_DJ_3_2" class="clue_text">Ferrocerium is used to make <a href="https://www.j-archive.com/media/2024-02-26_DJ_21.jpg" target="_blank">these</a> rocky-sounding sparking devices in cigarette lighters</td>
+    <td id="clue_DJ_3_3" class="clue_text">Stellite, which coats saw teeth &amp; lathes, got its name because its brilliance was like these</td>
+    <td id="clue_DJ_3_4" class="clue_text">This 7-letter word for an alloy used in dentistry is also used to mean any combination of 2 or more substances</td>
+    <td id="clue_DJ_3_5" class="clue_text">Lydia in Asia Minor was the chief source in the ancient world of this naturally occurring alloy made of gold &amp; silver</td>
