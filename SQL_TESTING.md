@@ -61,7 +61,11 @@ Contains the current players and their attributed data
 - Score INT
 
 #### Constraints:
+- PlayerID is unique
+
 #### Relationships:
+- PlayerID relates to Player# in Game table
+- Score is queried 
 #### Tests:
 
 ***
@@ -70,10 +74,15 @@ Contains the current players and their attributed data
 Game
 
 #### Description:
+Table for tracking/storing current game and board data.
+
 #### Fields:
 - GameID INT (PK)
 - Random BIT
-- Num_Players INT
+- Player1 INT (nullable)
+- Player2 INT (nullable)
+- Player3 INT (nullable)
+- Player4 INT (nullable)
 - Category1 INT (CategoryID)
 - Category2 INT (CategoryID)
 - Category3 INT (CategoryID)
@@ -102,4 +111,6 @@ Logs the current state of gameplay to retrieve in case of page refresh/navigatio
 
 #### Constraints:
 #### Relationships:
+- GameID relates to game table for specific game data
+- 
 #### Tests:
