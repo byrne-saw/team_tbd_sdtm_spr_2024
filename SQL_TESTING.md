@@ -111,7 +111,7 @@ Status:
 Notes:  
 
 Post-Conditions:  
-- Game is established and ready to play.  
+- Player's response and correct answer can be compared to determine score.  
 
 ***
 ## Player Table
