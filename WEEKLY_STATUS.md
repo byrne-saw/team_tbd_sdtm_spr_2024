@@ -43,4 +43,12 @@ Milestone 4 has been completed and turned in. A team meeting was held to go over
 
 The database of clues has been expanded to include 6 categories with 10 clues each. This way, we have the data for one complete game of Jeopardy to work with as we work on the SQL milestone. The category added was Science, with clues taken from game ids 8831 and 8833. Also, a script to extract the answers from the game html files was written and added to the bin directory. This script was then used to extract the correct responses for the clues that are included in our database. The answers are all located in the newly created answers directory. This has the same layout as the clues directory, with each category having its own folder and text file, and all of the answers are in the same order that the clues are in in their respective text files. Further, the html files for all of the games used have been added to the repository in the game_files directory. 
 
+## Week 7 Status: 
+
+Spring Break! We took the week to relax.
+
+## Week 8 Status:
+
+We had a meeting to discuss the next milestone, the SQL_TESTING.md file. At the meeting, we did some brainstorming and collectively decided on the five tables that we would need for this milestone: Category, Clue_Answer, Player, Game, and Game_Log. After reaching this consensus, we assigned each group memebr a table to complete in the SQL_TESTING.md file before submission. At this time, all changes have been pushed to the repository, and this file is complete with each table having a Description, Fields, Constraints, Relationships, and Tests section. In the images folder, we have also added ERD.jpg, which shows a visual representation of how these five tables are connected to one another. 
+
 
