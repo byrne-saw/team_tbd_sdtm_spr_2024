@@ -2,6 +2,9 @@
 The preliminary tables below will comprise the SQL structure to maintain and facilitate JeoparDIY gampeplay.
 
 ***
+## Entity Relationship Diagram
+![ERD](./images/ERD.jpg)
+***
 ## Category Table
 ### Table Name: 
 Category
