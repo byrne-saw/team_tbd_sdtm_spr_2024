@@ -26,6 +26,14 @@ Stores information related to our custom categories, which currently include Geo
 - Links to the Clue_Answer Table's foreign key through category_id.
 - Links to the Game Table's foreign key through category_id.
 
+### Example Functions/Queries:
+Functions to generate random versus selected categories:  
+	generate_categ_rand: returns 5 random categories from the database  
+		example query: SELECT  CategName FROM category ORDER BY RANDOM() LIMIT 5    
+	
+	generate_categ_select: requires categories selected by user as a parameter; returns 5  preselected categories from the database   
+		example query: SELECT category_name FROM category WHERE category_id IN ({})  
+
 ### Tests:
 Use case name:
 - Fetch 5 clue/answers that belong to CategName when CategID is queried
@@ -83,10 +91,10 @@ Contains all questions and clues pulled from past Jeopardy games, associated wit
 ### Relationships:
 Each ClueAnsID correlates to a specific category (CategID in Category table).
 
-### Functions/Queries:  
-1. get clue(CluesAnsID): uses query SELECT CluesAnsID, Clue, Answer FROM Clue_Answer   
+### Example Functions/Queries: 
+Function to retrieve clues/answer based on user selection, which is a parameter:  
+	get clue(CluesAnsID): uses query SELECT CluesAnsID, Clue, Answer FROM Clue_Answer     
 									WHERE CluesAnsID = <user_selected CluesAnsID>  
-
 
 ### Tests:
 Use case name:  
@@ -140,7 +148,13 @@ Contains the current players and their attributed data.
 ### Relationships:
 - Player# in Game table references the PlayerID in Player table  
 - Score is queried  
-### Tests:
+
+### Example Functions/Queries:  
+Function to update a player's score after entering a correct answer and pulling the score value.  
+update_player_score(PlayerID, Value)  
+	example query: UPDATE Player SET Score = Score + ? WHERE PlayerID = ?  
+	
+### Tests:  
 Use case name:  
 - Verify that player names and scores are accurately displayed and updated. 
 
