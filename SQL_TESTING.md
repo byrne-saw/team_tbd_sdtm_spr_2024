@@ -210,6 +210,39 @@ Table for tracking/storing current game and board data.
 ### Relationships:  
 - Player# references PlayerID in Player table and Category# references CategID from Category table. 
 ### Tests:
+Use case name:  
+- Verify Game Setup and Player Assignments 
+
+Description:  
+- This test verifies that a new game setup correctly assigns players and categories based on player selections or random generation..
+
+Pre-Conditions:  
+- The "Create Game" page is accessible.
+- Player names (1 to 4) are available for input.
+- Categories are either chosen by players or set to be randomly selected.  
+  
+Test Steps:  
+1) Navigate to the "Create Game" page.
+2) Enter player names and select categories.
+3) Select the option for random or custom category selection.
+4) Submit to create a new game session.
+
+Expected Results:  
+1) A new GameID is generated.
+2) PlayerIDs are correctly assigned to Player1, Player2, ... fields based on input.
+3) Categories are assigned to Category1, Category2, ... fields either based on player selection or randomly.
+4) If the "Random" option was selected, categories assigned should be unique and randomly chosen from the Category table.
+ 
+Actual Results:  
+tbd
+
+Status:  
+
+Notes:  
+
+Post-Conditions:  
+- A new game session is created and ready to start with players and categories assigned.
+
 
 ***
 ## Game_Log Table
@@ -237,4 +270,36 @@ Logs the current state of gameplay to retrieve in case of page refresh/navigatio
 ### Relationships:
 - GameID references GameID in the Game table and Game_Log produces specific game data  
 - CluesAnsID references CluesAnsID in the Clue_Answer table.  
+  
 ### Tests:
+Use case name:  
+- Track Correct and Incorrect Answers for a Single Game Session
+
+Description:  
+- This test ensures that the Game_Log table accurately logs each event of answering a clue, recording whether the response was correct or incorrect.
+
+Pre-Conditions:  
+- A game session is active with GameID.
+- Players are interacting with the game, selecting clues and submitting answers.
+  
+Test Steps:  
+1) Player selects a clue from the game interface.
+2) Player submits an answer to the selected clue.
+3) System evaluates the answer and records the result in the Game_Log.
+
+Expected Results:  
+1) For each submitted answer, a new EventId is generated in the Game_Log.
+2) The GameID field matches the current game session.
+3) The CluesAnsID field correctly identifies the clue answered.
+4) The Correct field accurately reflects whether the player's answer was correct (1) or incorrect (0).
+ 
+Actual Results:  
+tbd
+
+Status:  
+
+Notes: 
+- This test should be repeated for multiple clues and answers, both correct and incorrect. 
+
+Post-Conditions:  
+- The Game_Log contains accurate logs of all attempts to answer clues, allowing for game progress tracking and potential recreation.
