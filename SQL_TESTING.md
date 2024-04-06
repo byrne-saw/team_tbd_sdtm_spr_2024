@@ -138,6 +138,32 @@ Contains the current players and their attributed data.
 - Player# in Game table references the PlayerID in Player table  
 - Score is queried  
 ### Tests:
+Use case name:  
+- Verify that player names and scores are accurately displayed and updated. 
+
+Description:  
+- Test that the correct player's score is increased or decreased by the indicated question value after the player answers the question correctly/incorrectly.
+Pre-Conditions:  
+-  Player names and categories with clues were generated. A player is set as the active player.
+
+Test Steps:  
+1) Click on a clue (dollar value) square within a category.  
+2) Enter a response to the clue.
+
+Expected Results:  
+1) If the resposne was correct, the player's score is increased by the dollar value associated with the question while the other players' scores remain unchanged.
+2) If the response was incorrect, the player's score is decreased by the dollar value associated with the question while the other player's scores remain unchanged.
+ 
+Actual Results:  
+tbd
+
+Status:  
+
+Notes:  
+
+Post-Conditions:  
+- All players' scores are correctly updated and displayed, and the active player can select the next clue. 
+
 
 ***
 ## Game Table
