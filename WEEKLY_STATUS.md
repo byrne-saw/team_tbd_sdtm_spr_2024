@@ -51,4 +51,8 @@ Spring Break! We took the week to relax.
 
 We had a meeting to discuss the next milestone, the SQL_TESTING.md file. At the meeting, we did some brainstorming and collectively decided on the five tables that we would need for this milestone: Category, Clue_Answer, Player, Game, and Game_Log. After reaching this consensus, we assigned each group memebr a table to complete in the SQL_TESTING.md file before submission. At this time, all changes have been pushed to the repository, and this file is complete with each table having a Description, Fields, Constraints, Relationships, and Tests section. In the images folder, we have also added ERD.jpg, which shows a visual representation of how these five tables are connected to one another. 
 
+## Week 9 Status:
+
+Initial HTML and JavaScript code was created for the homepage and the player name/category selection page. Event handlers were added for the two homepage buttons ('About' and 'Let's Play!'), which redirects that player to the requested page. The page for Let's Play has an event listener to generate random categories for a game, sending a request to a Flask route which fetches random categories from the database to dynamically update the HTML content. A function for the player name slots was also created. The next steps will include working on the game logic and testing the web pages, using the list of tests that were defined in a previous milestone. In addition, the CSS code will be developed further. 
+
 
