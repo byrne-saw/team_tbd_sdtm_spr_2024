@@ -43,6 +43,10 @@ def category(category):
     # Render a template for the specified category
     return render_template('category.html', category=category)
 
+@app.route('/gameplay')
+def gameplay(): # will need to send in categories somehow...
+    return render_template('gameplay.html')
+
 
 
 ###############################################################################
