@@ -1,16 +1,22 @@
 // Javascript for JeoparDIY Game functions
 
-// handle ‘Play’ and ‘About’ Buttons
-// Function to handle "Play" button click
+
+// handle "Play" button click
 document.getElementById('play-button').addEventListener('click', () => {
 	// Redirect to the player names page
 	window.location.href = '/player-names';
 });
-// Function to handle "About" button click
+// handle "About" button click
 document.getElementById('about-button').addEventListener('click', () => {
 	// Redirect to the about page
 	window.location.href = '/about';
 });
+// handle "Home" button click
+document.getElementById('home-button').addEventListener('click', () => {
+	// Redirect to the home page
+	window.location.href = '/';
+});
+
 
 
 // Function to handle "Random" category button click
