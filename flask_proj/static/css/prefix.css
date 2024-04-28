@@ -1,16 +1,32 @@
 /* Jeopardy font: ITC Korinna */
+
 body {
 	font-family: Korinna, sans-serif;
 	background-color: #CCA349;
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    min-height: 100vh; /* Ensure the body covers the entire viewport height */
-    justify-content: space-between; /* Place items at the beginning and end of the flex container */
-    align-items: center; /* Center items horizontally */
+	display: flex;
+	flex-direction: column; /* stack children vertically */
+	min-height: 100vh; /* ensure the body covers the entire viewport height */
+	justify-content: space-between; /* place items at the beginning and end of the flex container */
+	align-items: center; /* center items horizontally */
+}
+
+img {
+    width: 80%; /* make the image 20% smaller */
+	height: auto; /* maintain aspect ratio */
 }
 
 button {
-    margin-top: 10px; /* Adjust the top margin of buttons */
+	margin-top: 20px;
+	width: 150px; /* set width of buttons */
+	height: 50px; /* set height of buttons */
+}
+
+.buttons-container {
+	display: flex; /* flex container */
+}
+
+button:first-child {
+	margin-right: 20px; /* add margin between buttons */
 }
 
 
