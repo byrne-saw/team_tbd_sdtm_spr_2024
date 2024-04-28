@@ -1,16 +1,22 @@
 // Javascript for JeoparDIY Game functions
 
 
+
+function redirectToAboutPage() {
+	// redirect to the about page
+	window.location.href = '/about';
+}
+
+
 // handle "Play" button click
 document.getElementById('play-button').addEventListener('click', () => {
 	// Redirect to the player names page
 	window.location.href = '/player-names';
 });
+
 // handle "About" button click
-document.getElementById('about-button').addEventListener('click', () => {
-	// Redirect to the about page
-	window.location.href = '/about';
-});
+document.getElementById('about-button').addEventListener('click', redirectToAboutPage);
+
 // handle "Home" button click
 document.getElementById('home-button').addEventListener('click', () => {
 	// Redirect to the home page
