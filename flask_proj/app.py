@@ -47,6 +47,9 @@ def about():
 def gameplay(): # will need to send in categories somehow...
     return render_template('gameplay.html')
 
+@app.route('/player-names')
+def player_names():
+	return render_template('p2_names_categ.html')
 
 
 ###############################################################################
