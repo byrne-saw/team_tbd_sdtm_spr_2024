@@ -11,7 +11,7 @@ body {
 }
 
 img {
-    width: 80%; /* make the image 20% smaller */
+    width: 50%; /* make the image 20% smaller */
 	height: auto; /* maintain aspect ratio */
 }
 
