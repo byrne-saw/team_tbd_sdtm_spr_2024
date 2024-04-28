@@ -23,7 +23,7 @@ app = Flask(__name__)
 
 # Insert the wrapper for handling PROXY when using csel.io virtual machine
 # Calling this routine will have no effect if running on local machine
-prefix.use_PrefixMiddleware(app)   
+# prefix.use_PrefixMiddleware(app)   
 
 # test route to show prefix settings
 @app.route('/prefix_url')  
@@ -35,13 +35,13 @@ def prefix_url():
 # Define routes
 @app.route('/')
 def index():
-    categories = ['Geography', 'History', 'Literature', 'Pop Culture', 'Sports']  # Example categories
-    return render_template('categories.html', categories=categories)
+    return render_template('index.html')
 
-@app.route('/category/<category>')
-def category(category):
-    # Render a template for the specified category
-    return render_template('category.html', category=category)
+# Game instructions
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
 
 @app.route('/gameplay')
 def gameplay(): # will need to send in categories somehow...
