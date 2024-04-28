@@ -20,6 +20,8 @@ function redirectToHomePage() {
 }
 
 
+// ************** Categories  ***************
+
 // Function to handle "Random" category button click
 document.getElementById('random-button').addEventListener('click', () => {
 	// Send an AJAX request to fetch random categories from the server
@@ -41,7 +43,9 @@ document.getElementById('random-button').addEventListener('click', () => {
 });
 
 
-// Function to add player name slots dynamically
+// ************** Player Name ***************
+
+// add player name slots dynamically
 window.onload = () => {
 	const playerNamesDiv = document.getElementById('player-names');
 	const numPlayers = 4; // Number of player name slots
@@ -53,3 +57,29 @@ window.onload = () => {
 		playerNamesDiv.appendChild(input);
 	}
 };
+
+
+// define variables to store player names
+let playerName = "";
+
+
+// function to handle the submission of player name
+function submitPlayerName() {
+	// get the input values
+	playerName = document.getElementById('player-input').value.trim();
+	
+	// check if both input fields are filled
+	if (playerName) {
+		// display player names
+		document.getElementById('player-name').innerHTML = `<p>Player Name: ${player1Name}</p>`;
+		// disable input fields and submit button
+		document.getElementById('player-input').disabled = true;
+		document.getElementById('submit-name-button').disabled = true;
+		// maybe start the game here
+	} else {
+		alert("Please enter player name.");
+	}
+}
+
+// add event listener to the submit button
+document.getElementById('submit-name-button').addEventListener('click', submitPlayerName);

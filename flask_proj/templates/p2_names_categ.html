@@ -5,22 +5,30 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Enter Player Names</title>
+	<title>Enter Player Name</title>
 	<!-- css stylesheet link -->
 	<link rel="stylesheet" href="static/css/prefix.css">
 </head>
 <body>
-	<h2>Player Names</h2>
-	<div id="player-names">
+	<h2>Player Name</h2>
+	<div id="player-name">
 	<!-- Player name slots will be added dynamically here -->
 	</div>
-	<button id="random-button" class="button">Random</button>
-
 	<h2>Categories</h2>
 	<div id="categories">
+	<button id="random-button" class="button">Random</button>
 	<!-- Random categories will be displayed here -->
 	</div>
-
+	
+	<!-- add input fields for player names and a submit button -->
+	<div>
+		<input type="text" id="player-input" placeholder="Enter Player Name">
+		<button id="submit-name-button" class="button">Submit</button>
+	</div>
+	
 	<script src="static/js/jeopardy.js"></script> <!-- Link to JavaScript file -->
 </body>
 </html>
+
+
+
