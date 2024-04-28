@@ -147,19 +147,19 @@
             </div>
         </div>
     </div>
-    <div id="score_box">
-        <div class="player_scores" id="p1_score">
-            <p><strong>Cameron:</strong> $500</p>
-        </div>
-        <div class="player_scores" id="p2_score">
-            <p><strong>Amber:</strong> $500</p>
-        </div>
-        <div class="player_scores" id="p3_score">
-            <p><strong>Kori:</strong> $500</p>
-        </div>
-        <div class="player_scores" id="p4_score">
-            <p><strong>Ben:</strong> $500</p>
-        </div>
-    </div>
+	<div id="score_box">
+		<!-- Display the player name retrieved from localStorage -->
+		<div class="player_score" id="p1_score">
+			<p><strong id="player-name"></strong>: $500</p>
+		</div>
+	</div>
+
+	<script>
+		// retrieve the player name from localStorage
+		var playerName = localStorage.getItem('playerName');
+        
+		// display the player name on the page
+		document.getElementById('player-name').textContent = playerName;
+    </script>
 </body>
 </html>

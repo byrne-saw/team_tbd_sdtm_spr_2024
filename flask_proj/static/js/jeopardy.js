@@ -45,14 +45,13 @@ function submitPlayerName() {
 	// get the input values
 	playerName = document.getElementById('player-input').value.trim();
 	
-	// check if both input fields are filled
+	// check if both input field is filled
 	if (playerName) {
-		// Display the player name and greeting message
-		document.getElementById('player-name').innerHTML = `<p>Hello, ${playerName}!</p>`;
-		// disable input fields and submit button
-		document.getElementById('player-input').disabled = true;
-		document.getElementById('submit-name-button').disabled = true;
-		// maybe start the game here
+		// store the player name in localStorage to pass it to the gameplay.html page
+		localStorage.setItem('playerName', playerName);
+        
+		// redirect to the gameplay.html page
+		window.location.href = 'gameplay.html';
 	} else {
 		alert("Please enter player name.");
 	}
