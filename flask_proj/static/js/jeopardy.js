@@ -20,6 +20,48 @@ function redirectToHomePage() {
 }
 
 
+
+// ************** Player Name ***************
+
+// add player name slots dynamically
+window.onload = () => {
+	const playerNamesDiv = document.getElementById('player-names');
+	const numPlayers = 4; // Number of player name slots
+
+	for (let i = 1; i <= numPlayers; i++) {
+		const input = document.createElement('input');
+		input.type = 'text';
+		input.placeholder = `Player ${i} Name`;
+		playerNamesDiv.appendChild(input);
+	}
+};
+
+
+// define variables to store player names
+let playerName = "";
+
+// function to handle the submission of player name
+function submitPlayerName() {
+	// get the input values
+	playerName = document.getElementById('player-input').value.trim();
+	
+	// check if both input fields are filled
+	if (playerName) {
+		// Display the player name and greeting message
+		document.getElementById('player-name').innerHTML = `<p>Hello, ${playerName}!</p>`;
+		// disable input fields and submit button
+		document.getElementById('player-input').disabled = true;
+		document.getElementById('submit-name-button').disabled = true;
+		// maybe start the game here
+	} else {
+		alert("Please enter player name.");
+	}
+}
+
+// add event listener to the submit button
+document.getElementById('submit-name-button').addEventListener('click', submitPlayerName);
+
+
 // ************** Categories  ***************
 
 // Function to handle "Random" category button click
@@ -41,45 +83,3 @@ document.getElementById('random-button').addEventListener('click', () => {
 		})
 		.catch(error => console.error('Error fetching random categories:', error));
 });
-
-
-// ************** Player Name ***************
-
-// add player name slots dynamically
-window.onload = () => {
-	const playerNamesDiv = document.getElementById('player-names');
-	const numPlayers = 4; // Number of player name slots
-
-	for (let i = 1; i <= numPlayers; i++) {
-		const input = document.createElement('input');
-		input.type = 'text';
-		input.placeholder = `Player ${i} Name`;
-		playerNamesDiv.appendChild(input);
-	}
-};
-
-
-// define variables to store player names
-let playerName = "";
-
-
-// function to handle the submission of player name
-function submitPlayerName() {
-	// get the input values
-	playerName = document.getElementById('player-input').value.trim();
-	
-	// check if both input fields are filled
-	if (playerName) {
-		// display player names
-		document.getElementById('player-name').innerHTML = `<p>Player Name: ${player1Name}</p>`;
-		// disable input fields and submit button
-		document.getElementById('player-input').disabled = true;
-		document.getElementById('submit-name-button').disabled = true;
-		// maybe start the game here
-	} else {
-		alert("Please enter player name.");
-	}
-}
-
-// add event listener to the submit button
-document.getElementById('submit-name-button').addEventListener('click', submitPlayerName);
