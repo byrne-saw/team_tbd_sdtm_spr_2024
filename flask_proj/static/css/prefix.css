@@ -2,13 +2,16 @@
 body {
 	font-family: Korinna, sans-serif;
 	background-color: #CCA349;
-	display: flex;
-	justify-content: center; /* Horizontally center the content */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure the body covers the entire viewport height */
+    justify-content: space-between; /* Place items at the beginning and end of the flex container */
+    align-items: center; /* Center items horizontally */
 }
 
 button {
-    margin-top: 20px; /* Adjust the top margin of buttons */
-    margin-right: 20px; /* Adjust the right margin of buttons */
+    margin-top: 10px; /* Adjust the top margin of buttons */
 }
+
 
 
