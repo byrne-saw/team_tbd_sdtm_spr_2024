@@ -51,7 +51,7 @@ function submitPlayerName() {
 		localStorage.setItem('playerName', playerName);
         
 		// redirect to the gameplay.html page
-		window.location.href = 'gameplay.html';
+		window.location.href = 'templats/gameplay.html';
 	} else {
 		alert("Please enter player name.");
 	}
