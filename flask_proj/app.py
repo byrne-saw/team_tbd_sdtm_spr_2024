@@ -66,9 +66,69 @@ def inserting():
 # create app to use in this Flask application
 #app = Flask(__name__)
 def create_app():
-	creating()
-	inserting()
+	#creating()
+	#inserting()
 	app = Flask(__name__)
+	
+
+	@app.route('/test')
+	def test():
+		return "test completed"
+	
+	# test route to show prefix settings
+	@app.route('/prefix_url')  
+	def prefix_url():
+		return 'The URL for this page is {}'.format(url_for('prefix_url'))
+	
+	###############################################################################
+	
+	# Define routes
+	@app.route('/')
+	def index():
+		return render_template('index.html')
+	
+	# Game instructions
+	@app.route('/about')
+	def about():
+		return render_template("about.html")
+	
+	
+	@app.route('/gameplay')
+	def gameplay(): # will need to send in categories somehow...
+		return render_template('gameplay.html')
+	
+	@app.route('/player-names')
+	def player_names():
+		return render_template('p2_names_categ.html')
+	
+	
+	
+	
+	
+	# flask route to fetch categories from the Category table
+	@app.route('/categories')
+	def get_categories():
+		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
+		cur = conn.cursor()
+		cur.execute('SELECT CategName FROM Category ORDER BY Number')
+		categories = cur.fetchall()
+		conn.close()
+		return jsonify(categories)
+	
+	
+	# drop Category table from the database
+	@app.route('/db_drop')
+	def dropping():
+		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
+		cur = conn.cursor()
+		cur.execute('''
+			DROP TABLE Category;
+		''')
+		conn.commit()
+		conn.close()
+		return "Category Table Successfully Dropped"
+	
+	
 	return app
 	
 app = create_app()
@@ -78,62 +138,6 @@ app.config['DEBUG'] = os.environ.get('DEBUG', True)
 # Calling this routine will have no effect if running on local machine
 # prefix.use_PrefixMiddleware(app)   
 
-@app.route('/test')
-def test():
-	return "test completed"
-
-# test route to show prefix settings
-@app.route('/prefix_url')  
-def prefix_url():
-	return 'The URL for this page is {}'.format(url_for('prefix_url'))
-
-###############################################################################
-
-# Define routes
-@app.route('/')
-def index():
-	return render_template('index.html')
-
-# Game instructions
-@app.route('/about')
-def about():
-	return render_template("about.html")
-
-
-@app.route('/gameplay')
-def gameplay(): # will need to send in categories somehow...
-	return render_template('gameplay.html')
-
-@app.route('/player-names')
-def player_names():
-	return render_template('p2_names_categ.html')
-
-
-
-
-
-# flask route to fetch categories from the Category table
-@app.route('/categories')
-def get_categories():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
-	cur = conn.cursor()
-	cur.execute('SELECT CategName FROM Category ORDER BY Number')
-	categories = cur.fetchall()
-	conn.close()
-	return jsonify(categories)
-
-
-# drop Category table from the database
-@app.route('/db_drop')
-def dropping():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
-	cur = conn.cursor()
-	cur.execute('''
-		DROP TABLE Category;
-	''')
-	conn.commit()
-	conn.close()
-	return "Category Table Successfully Dropped"
 
 
 ###############################################################################
