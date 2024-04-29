@@ -61,9 +61,9 @@ def creating():
 	cur = conn.cursor()
 	cur.execute('''
 	DROP TABLE IF EXISTS Category; 
-    CREATE TABLE IF NOT EXISTS Category(
+    CREATE TABLE Category(
 		Number int,
-        CategName varchar(255)
+		CategName varchar(255)
         );
 	''')
 	conn.commit()
