@@ -64,14 +64,14 @@ def inserting():
 
 # create app to use in this Flask application
 # app = Flask(__name__)
-def init_app():
+def create_app():
 	app = Flask(__name__)
 	with app.app_context():
 		creating()
 		inserting()
 		return app
 	
-app = init_app()
+app = create_app()
 
 # Insert the wrapper for handling PROXY when using csel.io virtual machine
 # Calling this routine will have no effect if running on local machine
