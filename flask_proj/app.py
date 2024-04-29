@@ -21,6 +21,47 @@ from flask import Flask, url_for
 from flask import render_template
 from markupsafe import escape
 
+
+# create Category table
+def creating():
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	cur = conn.cursor()
+	cur.execute('''
+	DROP TABLE IF EXISTS Category; 
+    CREATE TABLE Category(
+		Number int,
+		CategName varchar(255)
+        );
+	''')
+	conn.commit()
+	conn.close()
+	return "Category Table Successfully Created"
+
+
+# insert values into Category table
+def inserting():
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	cur = conn.cursor()
+	cur.execute('''
+	INSERT INTO Category (Number, CategName)
+	Values
+	(1, 'MOUNTAIN HIGH'),
+	(2, 'FROM THE FRENCH'),
+	(3, 'BONDS OF COMMONALITY'),
+	(4, 'RAP WORDS & PHRASES'),
+	(5, 'NONFICTION'),
+	(6, 'I LIKE THE CUT OF YOUR JOB')
+	''')
+	conn.commit()
+	conn.close()
+	return "Category Table Populated"
+
+
+
+
+
+
+
 # create app to use in this Flask application
 # app = Flask(__name__)
 def init_app():
@@ -63,39 +104,7 @@ def player_names():
 	return render_template('p2_names_categ.html')
 
 
-# create Category table
-def creating():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
-	cur = conn.cursor()
-	cur.execute('''
-	DROP TABLE IF EXISTS Category; 
-    CREATE TABLE Category(
-		Number int,
-		CategName varchar(255)
-        );
-	''')
-	conn.commit()
-	conn.close()
-	return "Category Table Successfully Created"
 
-
-# insert values into Category table
-def inserting():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
-	cur = conn.cursor()
-	cur.execute('''
-	INSERT INTO Category (Number, CategName)
-	Values
-	(1, 'MOUNTAIN HIGH'),
-	(2, 'FROM THE FRENCH'),
-	(3, 'BONDS OF COMMONALITY'),
-	(4, 'RAP WORDS & PHRASES'),
-	(5, 'NONFICTION'),
-	(6, 'I LIKE THE CUT OF YOUR JOB')
-	''')
-	conn.commit()
-	conn.close()
-	return "Category Table Populated"
 
 
 # flask route to fetch categories from the Category table
