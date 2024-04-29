@@ -31,24 +31,24 @@ app = Flask(__name__)
 # test route to show prefix settings
 @app.route('/prefix_url')  
 def prefix_url():
-    return 'The URL for this page is {}'.format(url_for('prefix_url'))
+	return 'The URL for this page is {}'.format(url_for('prefix_url'))
 
 ###############################################################################
 
 # Define routes
 @app.route('/')
 def index():
-    return render_template('index.html')
+	return render_template('index.html')
 
 # Game instructions
 @app.route('/about')
 def about():
-    return render_template("about.html")
+	return render_template("about.html")
 
 
 @app.route('/gameplay')
 def gameplay(): # will need to send in categories somehow...
-    return render_template('gameplay.html')
+	return render_template('gameplay.html')
 
 @app.route('/player-names')
 def player_names():
@@ -120,6 +120,6 @@ if __name__ == '__main__':
 	creating()
 	inserting()
 	# run() method of Flask class runs the application 
-    # on the local development server using port 3308 instead of port 5000.
-    app.run(host='0.0.0.0', port=3308)
-
+	# on the local development server using port 3308 instead of port 5000.
+	app.run(host='0.0.0.0', port=3308)
+	
