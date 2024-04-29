@@ -29,6 +29,9 @@ let playerName = "";
 
 // function to handle the submission of player name
 function submitPlayerName() {
+	// prevent the default form submission behavior
+	event.preventDefault();
+	
 	// get the input values
 	playerName = document.getElementById('player-input').value.trim();
 	
@@ -76,7 +79,7 @@ window.onload = () => {
 
 
 	// add event listener to the submit button for player names
-	document.getElementById('submit-name-button').addEventListener('click', submitPlayerName);
+	document.getElementById('submit-name-button').addEventListener('click', (event) => submitPlayerName(event));
 	
 	// fetch categories from Flask route and populate the gameplay page
 	fetchCategories();
