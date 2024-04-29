@@ -18,7 +18,7 @@ function fetchCategories() {
 		.then(data => {
 			// Update the category headers on the gameplay page
 			for (let i = 0; i < data.length; i++) {
-				document.getElementById(`categ_${i + 1}`).innerText = data[i].CategName;
+				document.getElementById(`categ_${i + 1}`).value = data[i].CategName;
 			}
 		})
 		.catch(error => console.error('Error fetching categories:', error));
