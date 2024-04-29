@@ -96,7 +96,7 @@ def create_app():
 	def player_names():
 		return render_template('p2_names_categ.html')
 	
-"""	
+	
 	# flask route to fetch categories from the Category table
 	@app.route('/categories')
 	def get_categories():
@@ -106,9 +106,9 @@ def create_app():
 		categories = cur.fetchall()
 		conn.close()
 		return jsonify(categories)
+	
+	
 """
-	
-	
 	@app.route('/categories')
 	def get_categories():
 		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
@@ -116,7 +116,6 @@ def create_app():
 		cur.execute('SELECT Number, CategName FROM Category ORDER BY Number')
 		categories = cur.fetchall()
 		conn.close()
-
 	# Construct a list of dictionaries representing categories
 		categories_list = []
 		for category in categories:
@@ -125,10 +124,9 @@ def create_app():
 				'CategName': category[1]
 			}
 			categories_list.append(category_dict)
-
 		# Return the list of categories as JSON
 		return jsonify(categories_list)
-	
+"""
 	
 	# drop Category table from the database
 	@app.route('/db_drop')
