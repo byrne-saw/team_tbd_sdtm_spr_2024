@@ -51,7 +51,7 @@ def inserting():
 	(3, 'BONDS OF COMMONALITY'),
 	(4, 'RAP WORDS & PHRASES'),
 	(5, 'NONFICTION'),
-	(6, 'I LIKE THE CUT OF YOUR JOB');
+	(6, 'I LIKE THE CUT OF YOUR JOB')
 	''')
 	conn.commit()
 	conn.close()
