@@ -51,16 +51,11 @@ def inserting():
 	(3, 'BONDS OF COMMONALITY'),
 	(4, 'RAP WORDS & PHRASES'),
 	(5, 'NONFICTION'),
-	(6, 'I LIKE THE CUT OF YOUR JOB')
+	(6, 'I LIKE THE CUT OF YOUR JOB');
 	''')
 	conn.commit()
 	conn.close()
 	return "Category Table Populated"
-
-
-
-
-
 
 
 # create app to use in this Flask application
@@ -100,9 +95,6 @@ def create_app():
 	@app.route('/player-names')
 	def player_names():
 		return render_template('p2_names_categ.html')
-	
-	
-	
 	
 	
 	# flask route to fetch categories from the Category table
