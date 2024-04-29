@@ -23,19 +23,6 @@ function redirectToHomePage() {
 
 // ************** Player Name ***************
 
-// add player name slots dynamically
-window.onload = () => {
-	const playerNamesDiv = document.getElementById('player-names');
-	const numPlayers = 4; // Number of player name slots
-
-	for (let i = 1; i <= numPlayers; i++) {
-		const input = document.createElement('input');
-		input.type = 'text';
-		input.placeholder = `Player ${i} Name`;
-		playerNamesDiv.appendChild(input);
-	}
-};
-
 
 // define variables to store player names
 let playerName = "";
@@ -57,28 +44,59 @@ function submitPlayerName() {
 	}
 }
 
-// add event listener to the submit button
-document.getElementById('submit-name-button').addEventListener('click', submitPlayerName);
 
 
 // ************** Categories  ***************
 
-// Function to handle "Random" category button click
-document.getElementById('random-button').addEventListener('click', () => {
-	// Send an AJAX request to fetch random categories from the server
-	// Display the fetched categories in the 'categories' div
-	fetch('/random-categories')
+// function to fetch categories from Flask route and populate the gameplay page
+function fetchCategories() {
+	fetch('/categories')
 		.then(response => response.json())
 		.then(data => {
-			const categoriesDiv = document.getElementById('categories');
-			categoriesDiv.innerHTML = ''; // Clear previous categories
-
-			// Display the fetched categories
-			data.categories.forEach(category => {
-				const categoryElement = document.createElement('div');
-				categoryElement.textContent = category;
-				categoriesDiv.appendChild(categoryElement);
-			});
+			// Update the category headers on the gameplay page
+			for (let i = 0; i < data.length; i++) {
+				document.getElementById(`header_${i + 1}`).textContent = data[i].CategName;
+			}
 		})
-		.catch(error => console.error('Error fetching random categories:', error));
-});
+		.catch(error => console.error('Error fetching categories:', error));
+}
+
+
+window.onload = () => {
+	// add player name slots dynamically
+	const playerNamesDiv = document.getElementById('player-names');
+	const numPlayers = 4; // Number of player name slots
+
+	for (let i = 1; i <= numPlayers; i++) {
+		const input = document.createElement('input');
+		input.type = 'text';
+		input.placeholder = `Player ${i} Name`;
+		playerNamesDiv.appendChild(input);
+	}
+
+
+	// add event listener to the submit button for player names
+	document.getElementById('submit-name-button').addEventListener('click', submitPlayerName);
+
+	// add event listener to the "Random" category button
+	document.getElementById('random-button').addEventListener('click', () => {
+		// send an AJAX request to fetch random categories from the server
+		// display the fetched categories in the 'categories' div
+		fetch('/random-categories')
+			.then(response => response.json())
+			.then(data => {
+				const categoriesDiv = document.getElementById('categories');
+				categoriesDiv.innerHTML = ''; // Clear previous categories
+
+				// display the fetched categories
+				data.categories.forEach(category => {
+					const categoryElement = document.createElement('div');
+					categoryElement.textContent = category;
+					categoriesDiv.appendChild(categoryElement);
+				});
+			})
+			.catch(error => console.error('Error fetching random categories:', error));
+	});
+	// fetch categories from Flask route and populate the gameplay page
+	fetchCategories();
+};

@@ -13,6 +13,9 @@
 ## the csel.io virtual machine or running on a local machine.
 ## The module will create an app to use.
 import prefix
+import psycopg2
+import json
+from flask import jsonify
 
 from flask import Flask, url_for
 from flask import render_template
@@ -50,6 +53,66 @@ def gameplay(): # will need to send in categories somehow...
 @app.route('/player-names')
 def player_names():
 	return render_template('p2_names_categ.html')
+
+
+# create Category table
+@app.route('/db_createCateg')
+def creating():
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	cur = conn.cursor()
+	cur.execute('''
+    CREATE TABLE IF NOT EXISTS Category(
+		Number int,
+        CategName varchar(255)
+        );
+	''')
+	conn.commit()
+	conn.close()
+	return "Category Table Successfully Created"
+
+
+# insert values into Category table
+@app.route('/db_insertCateg')
+def inserting():
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	cur = conn.cursor()
+	cur.execute('''
+	INSERT INTO Category (Number, CategName)
+	Values
+	(1, 'MOUNTAIN HIGH'),
+	(2, 'FROM THE FRENCH'),
+	(3, 'BONDS OF COMMONALITY'),
+	(4, 'RAP WORDS & PHRASES'),
+	(5, 'NONFICTION'),
+	(6, 'I LIKE THE CUT OF YOUR JOB'),
+	''')
+	conn.commit()
+	conn.close()
+	return "Category Table Populated"
+
+
+# flask route to fetch categories from the Category table
+@app.route('/categories')
+def get_categories():
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	cur = conn.cursor()
+	cur.execute('SELECT CategName FROM Category ORDER BY Number')
+	categories = cur.fetchall()
+	conn.close()
+	return jsonify(categories)
+
+
+# drop Category table from the database
+@app.route('/db_drop')
+def dropping():
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	cur = conn.cursor()
+	cur.execute('''
+		DROP TABLE Category;
+	''')
+	conn.commit()
+	conn.close()
+	return "Category Table Successfully Dropped"
 
 
 ###############################################################################
