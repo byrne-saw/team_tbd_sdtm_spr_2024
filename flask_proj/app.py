@@ -95,8 +95,9 @@ def inserting():
 def get_categories():
 	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 	cur = conn.cursor()
-	categories = cur.execute('SELECT CategName FROM Category ORDER BY Number')
+	cur.execute('SELECT CategName FROM Category ORDER BY Number')
 	#categories = cur.fetchall()
+	categories = [row[0] for row in cur.fetchall()]  # Fetch all rows and extract the category names
 	conn.close()
 	return jsonify(categories)
 
