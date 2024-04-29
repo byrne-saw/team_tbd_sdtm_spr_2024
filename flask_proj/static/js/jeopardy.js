@@ -77,6 +77,9 @@ window.onload = () => {
 
 	// add event listener to the submit button for player names
 	document.getElementById('submit-name-button').addEventListener('click', submitPlayerName);
+	
+	// fetch categories from Flask route and populate the gameplay page
+	fetchCategories();
 
 	// add event listener to the "Random" category button
 	document.getElementById('random-button').addEventListener('click', () => {
@@ -97,6 +100,5 @@ window.onload = () => {
 			})
 			.catch(error => console.error('Error fetching random categories:', error));
 	});
-	// fetch categories from Flask route and populate the gameplay page
-	fetchCategories();
+
 };
