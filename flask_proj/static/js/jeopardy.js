@@ -23,15 +23,25 @@ function redirectToHomePage() {
 
 // ************** Player Name ***************
 
+// add player name slots dynamically
+window.onload = () => {
+	const playerNamesDiv = document.getElementById('player-names');
+	const numPlayers = 4; // Number of player name slots
+
+	for (let i = 1; i <= numPlayers; i++) {
+		const input = document.createElement('input');
+		input.type = 'text';
+		input.placeholder = `Player ${i} Name`;
+		playerNamesDiv.appendChild(input);
+	}
+};
+
 
 // define variables to store player names
 let playerName = "";
 
 // function to handle the submission of player name
 function submitPlayerName() {
-	// prevent the default form submission behavior
-	event.preventDefault();
-	
 	// get the input values
 	playerName = document.getElementById('player-input').value.trim();
 	
@@ -47,6 +57,8 @@ function submitPlayerName() {
 	}
 }
 
+// add event listener to the submit button
+document.getElementById('submit-name-button').addEventListener('click', submitPlayerName);
 
 
 // ************** Categories  ***************
@@ -65,43 +77,24 @@ function fetchCategories() {
 }
 
 
-window.onload = () => {
-	// add player name slots dynamically
-	const playerNamesDiv = document.getElementById('player-names');
-	const numPlayers = 4; // Number of player name slots
+// Function to handle "Random" category button click
+document.getElementById('random-button').addEventListener('click', () => {
+	// Send an AJAX request to fetch random categories from the server
+	// Display the fetched categories in the 'categories' div
+	fetch('/random-categories')
+		.then(response => response.json())
+		.then(data => {
+			const categoriesDiv = document.getElementById('categories');
+			categoriesDiv.innerHTML = ''; // Clear previous categories
 
-	for (let i = 1; i <= numPlayers; i++) {
-		const input = document.createElement('input');
-		input.type = 'text';
-		input.placeholder = `Player ${i} Name`;
-		playerNamesDiv.appendChild(input);
-	}
+			// Display the fetched categories
+			data.categories.forEach(category => {
+				const categoryElement = document.createElement('div');
+				categoryElement.textContent = category;
+				categoriesDiv.appendChild(categoryElement);
+			});
+		})
+		.catch(error => console.error('Error fetching random categories:', error));
+});
 
 
-	// add event listener to the submit button for player names
-	document.getElementById('submit-name-button').addEventListener('click', (event) => submitPlayerName(event));
-	
-	// fetch categories from Flask route and populate the gameplay page
-	fetchCategories();
-
-	// add event listener to the "Random" category button
-	document.getElementById('random-button').addEventListener('click', () => {
-		// send an AJAX request to fetch random categories from the server
-		// display the fetched categories in the 'categories' div
-		fetch('/random-categories')
-			.then(response => response.json())
-			.then(data => {
-				const categoriesDiv = document.getElementById('categories');
-				categoriesDiv.innerHTML = ''; // Clear previous categories
-
-				// display the fetched categories
-				data.categories.forEach(category => {
-					const categoryElement = document.createElement('div');
-					categoryElement.textContent = category;
-					categoriesDiv.appendChild(categoryElement);
-				});
-			})
-			.catch(error => console.error('Error fetching random categories:', error));
-	});
-
-};
