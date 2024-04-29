@@ -116,7 +116,7 @@ def dropping():
 
 ###############################################################################
 # main driver function
-if __name__ == '__main__':
+with app.app_context():
 	creating()
 	inserting()
 	# run() method of Flask class runs the application 
