@@ -66,11 +66,10 @@ def inserting():
 # create app to use in this Flask application
 #app = Flask(__name__)
 def create_app():
+	creating()
+	inserting()
 	app = Flask(__name__)
-	with app.app_context():
-		creating()
-		inserting()
-		return app
+	return app
 	
 app = create_app()
 app.config['DEBUG'] = os.environ.get('DEBUG', True)
