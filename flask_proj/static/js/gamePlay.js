@@ -25,9 +25,9 @@ function fetchCategories() {
 }
 
 // call fetchCategories() when the window is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-	fetchCategories;
-});
+window.onload = function() {
+	fetchCategories();
+};
 
 
 // Function to handle "Random" category button click
