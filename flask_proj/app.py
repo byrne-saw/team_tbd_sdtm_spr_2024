@@ -56,11 +56,11 @@ def player_names():
 
 
 # create Category table
-@app.route('/db_createCateg')
 def creating():
 	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
+	DROP TABLE IF EXISTS Category; 
     CREATE TABLE IF NOT EXISTS Category(
 		Number int,
         CategName varchar(255)
@@ -72,7 +72,6 @@ def creating():
 
 
 # insert values into Category table
-@app.route('/db_insertCateg')
 def inserting():
 	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 	cur = conn.cursor()
@@ -118,7 +117,9 @@ def dropping():
 ###############################################################################
 # main driver function
 if __name__ == '__main__':
-    # run() method of Flask class runs the application 
+	creating()
+	inserting()
+	# run() method of Flask class runs the application 
     # on the local development server using port 3308 instead of port 5000.
     app.run(host='0.0.0.0', port=3308)
 
