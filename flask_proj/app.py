@@ -25,7 +25,7 @@ from markupsafe import escape
 
 # create Category table
 def creating():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
 	DROP TABLE IF EXISTS Category; 
@@ -41,7 +41,7 @@ def creating():
 
 # insert values into Category table
 def inserting():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
 	INSERT INTO Category (Number, CategName)
@@ -66,8 +66,8 @@ def inserting():
 # create app to use in this Flask application
 #app = Flask(__name__)
 def create_app():
-	#creating()
-	#inserting()
+	creating()
+	inserting()
 	app = Flask(__name__)
 	
 
@@ -108,7 +108,7 @@ def create_app():
 	# flask route to fetch categories from the Category table
 	@app.route('/categories')
 	def get_categories():
-		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
+		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 		cur = conn.cursor()
 		cur.execute('SELECT CategName FROM Category ORDER BY Number')
 		categories = cur.fetchall()
@@ -119,7 +119,7 @@ def create_app():
 	# drop Category table from the database
 	@app.route('/db_drop')
 	def dropping():
-		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
+		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 		cur = conn.cursor()
 		cur.execute('''
 			DROP TABLE Category;
