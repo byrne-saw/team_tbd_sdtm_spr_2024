@@ -96,7 +96,7 @@ def get_categories():
 	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 	cur = conn.cursor()
 	cur.execute('SELECT CategName FROM Category ORDER BY Number')
-	categories = cur.fetchall()
+	#categories = cur.fetchall()
 	conn.close()
 	return jsonify(categories)
 
