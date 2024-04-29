@@ -12,6 +12,7 @@
 ## Import "prefix" code to make your app usable when running Flask either in 
 ## the csel.io virtual machine or running on a local machine.
 ## The module will create an app to use.
+import os
 import prefix
 import psycopg2
 import json
@@ -24,7 +25,7 @@ from markupsafe import escape
 
 # create Category table
 def creating():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
 	DROP TABLE IF EXISTS Category; 
@@ -40,7 +41,7 @@ def creating():
 
 # insert values into Category table
 def inserting():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
 	INSERT INTO Category (Number, CategName)
@@ -63,7 +64,7 @@ def inserting():
 
 
 # create app to use in this Flask application
-# app = Flask(__name__)
+#app = Flask(__name__)
 def create_app():
 	app = Flask(__name__)
 	with app.app_context():
@@ -72,10 +73,15 @@ def create_app():
 		return app
 	
 app = create_app()
+app.config['DEBUG'] = os.environ.get('DEBUG', True)
 
 # Insert the wrapper for handling PROXY when using csel.io virtual machine
 # Calling this routine will have no effect if running on local machine
 # prefix.use_PrefixMiddleware(app)   
+
+@app.route('/test')
+def test():
+	return "test completed"
 
 # test route to show prefix settings
 @app.route('/prefix_url')  
@@ -110,7 +116,7 @@ def player_names():
 # flask route to fetch categories from the Category table
 @app.route('/categories')
 def get_categories():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 	cur = conn.cursor()
 	cur.execute('SELECT CategName FROM Category ORDER BY Number')
 	categories = cur.fetchall()
@@ -121,7 +127,7 @@ def get_categories():
 # drop Category table from the database
 @app.route('/db_drop')
 def dropping():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
 		DROP TABLE Category;
