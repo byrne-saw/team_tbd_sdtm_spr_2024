@@ -23,6 +23,14 @@ from markupsafe import escape
 
 # create app to use in this Flask application
 # app = Flask(__name__)
+def init_app():
+	app = Flask(__name__)
+	with app.app_context():
+		creating()
+		inserting()
+		return app
+	
+init_app()
 
 # Insert the wrapper for handling PROXY when using csel.io virtual machine
 # Calling this routine will have no effect if running on local machine
@@ -115,14 +123,7 @@ def dropping():
 
 
 ###############################################################################
-def init_app():
-	app = Flask(__name__)
-	with app.app_context():
-		creating()
-		inserting()
-		return app
-	
-init_app()
+
 
 # main driver function
 #if __name__ == '__main__':
