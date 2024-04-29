@@ -20,6 +20,8 @@ function fetchCategories() {
 			for (let i = 0; i < data.length; i++) {
 				document.getElementById(`categ_${i + 1}`).innerText = data[i].CategName;
 			}
+			const element = document.getElementById('categ_1');
+			console.log(element);
 		})
 		.catch(error => console.error('Error fetching categories:', error));
 }
