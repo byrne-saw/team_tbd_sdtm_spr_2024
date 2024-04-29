@@ -115,9 +115,9 @@ def dropping():
 
 
 ###############################################################################
-#with app.app_context():
-#	creating()
-#	inserting()
+with app.app_context():
+	creating()
+	inserting()
 
 # main driver function
 #if __name__ == '__main__':
