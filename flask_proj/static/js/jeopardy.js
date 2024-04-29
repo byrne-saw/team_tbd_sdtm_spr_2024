@@ -76,6 +76,9 @@ function fetchCategories() {
 		.catch(error => console.error('Error fetching categories:', error));
 }
 
+// call fetchCategories() when the window is fully loaded
+window.onload = fetchCategories;
+
 
 // Function to handle "Random" category button click
 document.getElementById('random-button').addEventListener('click', () => {
