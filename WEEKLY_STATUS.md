@@ -55,4 +55,12 @@ We had a meeting to discuss the next milestone, the SQL_TESTING.md file. At the 
 
 Initial HTML and JavaScript code was created for the homepage and the player name/category selection page. Event handlers were added for the two homepage buttons ('About' and 'Let's Play!'), which redirects that player to the requested page. The page for Let's Play has an event listener to generate random categories for a game, sending a request to a Flask route which fetches random categories from the database to dynamically update the HTML content. A function for the player name slots was also created. The next steps will include working on the game logic and testing the web pages, using the list of tests that were defined in a previous milestone. In addition, the CSS code will be developed further. 
 
+## Week 10 Status:
+
+We created a demo on Render for our presentation. We have a home page, and about button, and a play button that are all functional. One player can input a user name and a mock game board is created and displayed. We need to work on formatting and getting the game board functional.
+
+## Week 11 Status:
+
+We scheduled a time for our presentation. We also created a google slide document so that we can all work on the presentation. We determined what slides we needed to include and who would be responsible for presenting/formatting each slide. We also scheduled some time to do a practice run through and record our demo before our final presentation.
+
 
