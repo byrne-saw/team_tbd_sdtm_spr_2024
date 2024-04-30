@@ -5,7 +5,7 @@
 <head>
 	<link rel="stylesheet" href="static/css/gameplay.css">
 	<!-- javascript source file -->
-    <!-- <script src="static/js/jeopardy.js"></script> -->
+    <script type="module" src="static/js/gamePlay.js"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Create-JeoparDIY</title>
@@ -16,7 +16,7 @@
     <div id="jboard">
         <div class="jboard_col" id="jboard_c1">
             <div class="jboard_header" id="header_1">
-                <p>Category 1</p>
+                <p id="categ_1">Category 1</p>
             </div>
             <div class="jboard_body" id="cat_1">
                 <div class="clue_box" id="cat_1_200">
@@ -38,7 +38,7 @@
         </div>
         <div class="jboard_col" id="jboard_c2">
             <div class="jboard_header" id="header_2">
-                <p>Category 2</p>
+                <p id="categ_2">Category 2</p>
             </div>
             <div class="jboard_body" id="cat_2">
                 <div class="clue_box" id="cat_2_200">
@@ -60,7 +60,7 @@
         </div>
         <div class="jboard_col" id="jboard_c3">
             <div class="jboard_header" id="header_3">
-                <p>Category 3</p>
+                <p id="categ_3">Category 3</p>
             </div>
             <div class="jboard_body" id="cat_3">
                 <div class="clue_box" id="cat_3_200">
@@ -82,7 +82,7 @@
         </div>
         <div class="jboard_col" id="jboard_c4">
             <div class="jboard_header" id="header_4">
-                <p>Category 4</p>
+                <p id="categ_4">Category 4</p>
             </div>
             <div class="jboard_body" id="cat_4">
                 <div class="clue_box" id="cat_4_200">
@@ -104,7 +104,7 @@
         </div>
         <div class="jboard_col" id="jboard_c5">
             <div class="jboard_header" id="header_5">
-                <p>Category 5</p>
+                <p id="categ_5">Category 5</p>
             </div>
             <div class="jboard_body" id="cat_5">
                 <div class="clue_box" id="cat_5_200">
@@ -126,7 +126,7 @@
         </div>
         <div class="jboard_col" id="jboard_c6">
             <div class="jboard_header" id="header_6">
-                <p>Category 6</p>
+                <p id="categ_6">Category 6</p>
             </div>
             <div class="jboard_body" id="cat_6">
                 <div class="clue_box" id="cat_6_200">
@@ -147,19 +147,19 @@
             </div>
         </div>
     </div>
-    <div id="score_box">
-        <div class="player_scores" id="p1_score">
-            <p><strong>Cameron:</strong> $500</p>
-        </div>
-        <div class="player_scores" id="p2_score">
-            <p><strong>Amber:</strong> $500</p>
-        </div>
-        <div class="player_scores" id="p3_score">
-            <p><strong>Kori:</strong> $500</p>
-        </div>
-        <div class="player_scores" id="p4_score">
-            <p><strong>Ben:</strong> $500</p>
-        </div>
-    </div>
+	<div id="score_box">
+		<!-- Display the player name retrieved from localStorage -->
+		<div class="player_score" id="p1_score">
+			<p><strong id="player-name"></strong>: $500</p>
+		</div>
+	</div>
+
+	<script>
+		// retrieve the player name from localStorage
+		var playerName = localStorage.getItem('playerName');
+        
+		// display the player name on the page
+		document.getElementById('player-name').textContent = playerName;
+    </script>
 </body>
 </html>
