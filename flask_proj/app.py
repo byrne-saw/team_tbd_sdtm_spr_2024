@@ -16,7 +16,7 @@ from markupsafe import escape
 
 
 # create Category table
-def creating():
+def create_db_tables():
 	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
@@ -32,7 +32,7 @@ def creating():
 
 
 # insert values into Category table
-def inserting():
+def insert_data_into_dbtables():
 	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
@@ -53,19 +53,9 @@ def inserting():
 # create app to use in this Flask application
 #app = Flask(__name__)
 def create_app():
-	creating()
-	inserting()
+	create_db_tables()
+	insert_data_into_dbtables()
 	app = Flask(__name__)
-	
-
-	@app.route('/test')
-	def test():
-		return "test completed"
-	
-	# test route to show prefix settings
-	@app.route('/prefix_url')  
-	def prefix_url():
-		return 'The URL for this page is {}'.format(url_for('prefix_url'))
 	
 	###############################################################################
 	
@@ -79,7 +69,6 @@ def create_app():
 	def about():
 		return render_template("about.html")
 	
-	
 	@app.route('/gameplay')
 	def gameplay(): # will need to send in categories somehow...
 		return render_template('gameplay.html')
@@ -87,7 +76,6 @@ def create_app():
 	@app.route('/player-names')
 	def player_names():
 		return render_template('p2_names_categ.html')
-	
 	
 	@app.route('/categories')
 	def get_categories():
