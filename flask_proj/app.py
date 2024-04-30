@@ -53,12 +53,8 @@ def inserting():
 # create app to use in this Flask application
 #app = Flask(__name__)
 def create_app():
-	print("Starting creating()")
 	creating()
-	print("Finishing creating()")
-	print("Starting inserting()")
 	inserting()
-	print("Finishing inserting()")
 	app = Flask(__name__)
 	
 
