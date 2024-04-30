@@ -2,18 +2,10 @@
 ## JeoparDIY Flask Application  
 ## Team 2
 ##
-## The **prefix.py** code is included to allow code to be developed within
-## the **csel.io** environment.  There is a required prefix to be used when
-## pages access the **csel.io** virtual machine from a local machine browser.
-## 
 ###############################################################################
 
-###############################################################################
-## Import "prefix" code to make your app usable when running Flask either in 
-## the csel.io virtual machine or running on a local machine.
-## The module will create an app to use.
 import os
-import prefix
+
 import psycopg2
 import json
 from flask import jsonify
@@ -61,8 +53,12 @@ def inserting():
 # create app to use in this Flask application
 #app = Flask(__name__)
 def create_app():
+	print("Starting creating()")
 	creating()
+	print("Finishing creating()")
+	print("Starting inserting()")
 	inserting()
+	print("Finishing inserting()")
 	app = Flask(__name__)
 	
 
@@ -96,17 +92,6 @@ def create_app():
 	def player_names():
 		return render_template('p2_names_categ.html')
 	
-	"""
-	# flask route to fetch categories from the Category table
-	@app.route('/categories')
-	def get_categories():
-		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
-		cur = conn.cursor()
-		cur.execute('SELECT CategName FROM Category ORDER BY Number')
-		categories = cur.fetchall()
-		conn.close()
-		return jsonify(categories)
-	"""
 	
 	@app.route('/categories')
 	def get_categories():
@@ -144,18 +129,3 @@ def create_app():
 	
 app = create_app()
 app.config['DEBUG'] = os.environ.get('DEBUG', True)
-
-# Insert the wrapper for handling PROXY when using csel.io virtual machine
-# Calling this routine will have no effect if running on local machine
-# prefix.use_PrefixMiddleware(app)   
-
-
-
-###############################################################################
-
-
-# main driver function
-#if __name__ == '__main__':
-	# run() method of Flask class runs the application 
-	# on the local development server using port 3308 instead of port 5000.
-	# app.run(host='0.0.0.0', port=10000)
