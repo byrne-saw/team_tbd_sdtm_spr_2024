@@ -96,7 +96,7 @@ def create_app():
 	def player_names():
 		return render_template('p2_names_categ.html')
 	
-"""
+	"""
 	# flask route to fetch categories from the Category table
 	@app.route('/categories')
 	def get_categories():
@@ -106,9 +106,8 @@ def create_app():
 		categories = cur.fetchall()
 		conn.close()
 		return jsonify(categories)
-"""
+	"""
 	
-
 	@app.route('/categories')
 	def get_categories():
 		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
