@@ -17,7 +17,7 @@ from markupsafe import escape
 
 # create Category table
 def create_db_tables():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
 	DROP TABLE IF EXISTS Category; 
@@ -33,7 +33,7 @@ def create_db_tables():
 
 # insert values into Category table
 def insert_data_into_dbtables():
-	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
 	INSERT INTO Category (Number, CategName)
@@ -79,7 +79,7 @@ def create_app():
 	
 	@app.route('/categories')
 	def get_categories():
-		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 		cur = conn.cursor()
 		cur.execute('SELECT Number, CategName FROM Category ORDER BY Number')
 		categories = cur.fetchall()
@@ -99,7 +99,7 @@ def create_app():
 	# drop Category table from the database
 	@app.route('/db_drop')
 	def dropping():
-		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a/tin_db")
+		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 		cur = conn.cursor()
 		cur.execute('''
 			DROP TABLE Category;
