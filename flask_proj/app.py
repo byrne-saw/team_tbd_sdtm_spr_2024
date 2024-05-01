@@ -22,10 +22,20 @@ def create_db_tables():
 	cur.execute('''
 	DROP TABLE IF EXISTS Category; 
     CREATE TABLE Category(
-		Number int,
+		Number int PRIMARY KEY,
 		CategName varchar(255)
         );
 	''')
+	
+	cur.execute('''
+	DROP TABLE IF EXISTS Clue; 
+    CREATE TABLE Clue(
+		ClueID int PRIMARY KEY,
+		ClueText varchar(255),
+		CategID int REFERENCES Category(Number)
+        );
+	''')
+	
 	conn.commit()
 	conn.close()
 	return "Category Table Successfully Created"
@@ -35,19 +45,36 @@ def create_db_tables():
 def insert_data_into_dbtables():
 	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 	cur = conn.cursor()
-	cur.execute('''
-	INSERT INTO Category (Number, CategName)
-	Values
-	(1, 'MOUNTAIN HIGH'),
-	(2, 'FROM THE FRENCH'),
-	(3, 'BONDS OF COMMONALITY'),
-	(4, 'RAP WORDS & PHRASES'),
-	(5, 'NONFICTION'),
-	(6, 'I LIKE THE CUT OF YOUR JOB')
-	''')
+    
+	# Function to insert values into the Category table
+	def insert_categories():
+		cur.execute('''
+			INSERT INTO Category (Number, CategName)
+			VALUES
+			(1, 'MOUNTAIN HIGH'),
+			(2, 'FROM THE FRENCH'),
+			(3, 'BONDS OF COMMONALITY'),
+			(4, 'RAP WORDS & PHRASES'),
+			(5, 'NONFICTION'),
+			(6, 'I LIKE THE CUT OF YOUR JOB')
+		''')
+		
+	# Function to insert values into the Clue table from clues.txt
+	def insert_clues_from_file(filename):
+		with open(database_files/clues_8790.txt, 'r') as file:
+			for line in file:
+				values = line.strip().split('\t')
+				ClueID, CategID, ClueText = values
+				cur.execute("INSERT INTO Clue (ClueID, CategID, ClueText) VALUES (%s, %s, %s)", (ClueID, CategID, ClueText))
+    
+	# Call the functions to insert data
+	insert_categories()
+	insert_clues_from_file('clues.txt')
+    
 	conn.commit()
 	conn.close()
-	return "Category Table Populated"
+    
+	return "Tables Successfully Populated"
 
 
 # create app to use in this Flask application
@@ -113,3 +140,6 @@ def create_app():
 	
 app = create_app()
 app.config['DEBUG'] = os.environ.get('DEBUG', True)
+
+if __name__ == 'main':
+	app.run()
