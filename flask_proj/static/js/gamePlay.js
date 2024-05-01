@@ -7,7 +7,8 @@ function redirectToHomePage() {
 	window.location.href = '/';
 }
 
-
+// Export function to module scope
+window.redirectToHomePage = redirectToHomePage;
 
 // ************** Categories  ***************
 
