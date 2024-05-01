@@ -36,5 +36,13 @@ button:first-child {
 	margin-right: 20px; /* add margin between buttons */
 }
 
+#player-name {
+	height: 20px;
+}
+
+#submit-name-button {
+	height: 20px; 
+}
+
 
 
