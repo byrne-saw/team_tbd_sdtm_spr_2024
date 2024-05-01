@@ -61,7 +61,7 @@ def insert_data_into_dbtables():
 		
 	# Function to insert values into the Clue table from clues.txt
 	def insert_clues_from_file(filename):
-		with open(database_files/clues_8790.txt, 'r') as file:
+		with open('database_files/clues_8790.txt', 'r') as file:
 			for line in file:
 				values = line.strip().split('\t')
 				ClueID, CategID, ClueText = values
