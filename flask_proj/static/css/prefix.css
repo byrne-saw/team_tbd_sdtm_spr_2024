@@ -1,13 +1,20 @@
-/* Jeopardy font: ITC Korinna */
+/* Homepage/About stylesheet */
+
 
 body {
 	font-family: Korinna, sans-serif;
 	background-color: #CCA349;
 	display: flex;
-	flex-direction: column; /* stack children vertically */
-	min-height: 100vh; /* ensure the body covers the entire viewport height */
-	justify-content: space-between; /* place items at the beginning and end of the flex container */
-	align-items: center; /* center items horizontally */
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.text-box {
+	border: 2px solid #000;
+	padding: 20px;
 }
 
 img {
