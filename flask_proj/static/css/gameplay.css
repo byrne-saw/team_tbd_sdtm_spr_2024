@@ -64,3 +64,13 @@ body {
     border: solid 1px black;
 }
 
+button {
+	margin-top: 20px;
+	width: 150px; /* set width of buttons */
+	height: 50px; /* set height of buttons */
+}
+
+.buttons-container {
+	display: flex; /* flex container */
+}
+
