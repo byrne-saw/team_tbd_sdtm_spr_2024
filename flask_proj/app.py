@@ -20,7 +20,7 @@ def create_db_tables():
 	conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 	cur = conn.cursor()
 	cur.execute('''
-	DROP TABLE IF EXISTS Category; 
+	DROP TABLE IF EXISTS Category CASCADE; 
     CREATE TABLE Category(
 		Number int,
 		CategName varchar(255)
@@ -102,7 +102,7 @@ def create_app():
 		conn = psycopg2.connect("postgres://tin_db_user:tTiToULPV8Lk0GywTYolmJYineD40MUb@dpg-co0ekkol5elc738o47p0-a.oregon-postgres.render.com/tin_db")
 		cur = conn.cursor()
 		cur.execute('''
-			DROP TABLE Category;
+			DROP TABLE Category CASCADE;
 		''')
 		conn.commit()
 		conn.close()
