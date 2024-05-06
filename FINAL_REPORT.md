@@ -12,8 +12,6 @@ Andrew Byrnes, Cameron Braatz, Ben Little, Amber Tin, Kori Price
 ## Repository Link
 [JeoparDIY Repository](https://github.com/byrne-saw/team_tbd_sdtm_spr_2024)
 
-## Public Website Link
-[Public Website](https://team-tbd-sdtm-spr-2024-p0th.onrender.com)
 
 
 ## Final Status Report:
@@ -47,4 +45,4 @@ Due to schedule conflicts, we needed to establish our project meetings on a week
 Using this approach allowed us to have meetings with all team members in attendance for the vast majority of the semester, while providing the flexibility to meet according to upcoming deadlines and current project hangups. Establishing meetings week to week based on our current availability ensured that we could maximize our team’s attendance. The flexible nature had its benefits, but often made our sprints revolve around major project deadlines rather than general development milestones.
 Overall, our team made the most of the changing schedule and were able to maintain fairly consistent weekly meetings. We were still able to hit all our project milestones without the need for late nights or rushed development at the last minute. In a real-world scenario, it would have likely been most effective to have a consistent Agile stand-up to retain pacing throughout the project while supplemental floating meetings could be scheduled independently for more in-depth project collaboration/support.
 
-## Public Deployment Site:
+## Public Deployment Site: [Public Website](https://team-tbd-sdtm-spr-2024-p0th.onrender.com)
