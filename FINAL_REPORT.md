@@ -12,6 +12,10 @@ Andrew Byrnes, Cameron Braatz, Ben Little, Amber Tin, Kori Price
 ## Repository Link
 [JeoparDIY Repository](https://github.com/byrne-saw/team_tbd_sdtm_spr_2024)
 
+## Public Website Link
+[Public Website](https://team-tbd-sdtm-spr-2024-p0th.onrender.com)
+
+
 ## Final Status Report:
 ### Completed:
 We designed and developed an application that kickstarts the process of creating a customizable Jeopardy game utilizing clues and categories from past Jeopardy games. Users first arrive on a landing page with the option to learn more (About) or start initializing a game (Play). Opting for the ‘About’ option leads the user to a page with an initial explanation of the app and its vision, while choosing the ‘Play’ option navigates to a page that prompts and accepts dynamic user input for the user’s chosen name. Once accepted, the application builds and displays the iconic Jeopardy board where the user’s name fills the scoreboard, and database queries fill the six clue columns.
