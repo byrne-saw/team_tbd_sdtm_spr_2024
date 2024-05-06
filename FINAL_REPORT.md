@@ -6,7 +6,8 @@ Andrew Byrnes, Cameron Braatz, Ben Little, Amber Tin, Kori Price
 ## Project Tracker Link:
 [JeoparDIY Trello](https://trello.com/b/H7kuLDWW/teamtbdsdtmspr2024)
 
-## Demo Video
+## Demo Video:
+[JeoparDIY Demo](https://github.com/byrne-saw/team_tbd_sdtm_spr_2024/blob/main/JeoparDIY_demo_video.mp4)
 
 ## Repository Link
 [JeoparDIY Repository](https://github.com/byrne-saw/team_tbd_sdtm_spr_2024)
